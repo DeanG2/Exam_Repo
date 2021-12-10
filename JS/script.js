@@ -1,18 +1,19 @@
 const inputId = [
-    "name", "email", "message"
+    "name", "email", "msg"
 ]
 
 let myMessage = {}
 
 const submitBtn = document.querySelector('#frm-btn')
 
-submitBtn.addEventListener("click", (e) => {
+submitBtn.addEventListener('click', (e)=> {
+
     console.log("Message Submitted")
 
     saveMessage(true)
 })
 
-function saveCancelAction(save) {
+function saveMessage(save) {
 
     inputId.forEach((ele) => {
 
@@ -36,8 +37,22 @@ function saveCancelAction(save) {
 
     
     if (save) {
-        contactList.push(myContact)
         console.log(myContact)
     }
 
 }
+
+function toggleMode() {
+
+    var element = document.querySelector("#body-theme");
+
+    element.classList.toggle(".light-theme");
+
+  }
+
+const toggleBtn = document.querySelector(".toggle")
+
+toggleBtn.addEventListener('click', (e)=> {
+    toggleMode()
+})
+
