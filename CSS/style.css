@@ -187,3 +187,17 @@ input[type=text]:focus {
  background: var(--darkGreen);
  color: var(--white);
 }
+
+@media screen and (max-width: 600px) {
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+}
