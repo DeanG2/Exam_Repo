@@ -10,7 +10,7 @@ submitBtn.addEventListener('click', (e)=> {
 
     console.log("Message Submitted")
 
-    saveMessage(true)
+    e.saveMessage(true)
 })
 
 function saveMessage(save) {
@@ -46,13 +46,15 @@ function toggleMode() {
 
     var element = document.querySelector("#body-theme");
 
-    element.classList.toggle(".light-theme");
+    element.classList.toggle("light-theme");
 
-  }
-
+}
+  
 const toggleBtn = document.querySelector(".toggle")
 
 toggleBtn.addEventListener('click', (e)=> {
-    toggleMode()
+
+    e.toggleMode()
+
 })
 
