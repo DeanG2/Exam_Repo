@@ -6,11 +6,11 @@ let myMessage = {}
 
 const submitBtn = document.querySelector('#frm-btn')
 
-submitBtn.addEventListener('click', (e)=> {
+submitBtn.addEventListener("click", (e) => {
 
     console.log("Message Submitted")
 
-    e.saveMessage(true)
+    e.saveMessage(True)
 })
 
 function saveMessage(save) {
@@ -29,7 +29,7 @@ function saveMessage(save) {
                 save? myContact["email"] = input.value : input.value = ""
             break
 
-            case "contactaddress":
+            case "msg":
                 save?  myContact["message"] = input.value : input.value = ""
             break
         }
